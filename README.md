@@ -1,3 +1,11 @@
+#Redux To-Do Assignment
+
+A class asssignment to practice and demonstrate use of react and redux
+by making a simple To-Do list app.
+
+----------------------------------------------------------------------------
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
