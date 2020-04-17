@@ -1,4 +1,4 @@
-#Redux To-Do Assignment
+# Redux To-Do Assignment
 
 A class asssignment to practice and demonstrate use of react and redux
 by making a simple To-Do list app.
