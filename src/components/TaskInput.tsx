@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { Component, Fragment } from 'react';
 import { Input, Button } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import { RootState } from '../store';
+import { addTaskToList, removeTaskFromList } from '../store/todo/actions';
 
 export interface ITaskInputProps {
   onClickSubmitButton: (newTaskDescriptionInput: string) => void;
@@ -9,7 +12,7 @@ interface ITaskInputState {
   newTaskDescription: string;
 }
 
-export default class TaskInput extends Component<ITaskInputProps, ITaskInputState> {
+export class TaskInput extends Component<ITaskInputProps, ITaskInputState> {
   constructor(props: ITaskInputProps) {
     super(props);
     this.state = {
@@ -33,3 +36,14 @@ export default class TaskInput extends Component<ITaskInputProps, ITaskInputStat
     );
   }
 }
+
+const mapStateToProps = (state: RootState) => {
+  return {
+    taskList: state.todo.taskList,
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  { addTaskToList, removeTaskFromList }
+)(TaskInput);
