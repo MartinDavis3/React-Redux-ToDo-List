@@ -14,16 +14,17 @@ export interface ITaskButtonProps {
 
 export class TaskButton extends Component<ITaskButtonProps> {
 
-  public onButtonClick = (id: number):number => {
-    return id
+  onClickRemoveTask() {
+    const { taskId } = this.props;
+    this.props.removeTaskFromList(taskId);
   }
 
   public render() {
-    const { taskList } = this.props
+    const { taskList, taskId } = this.props
     const currentTask = taskList.filter(individualTask => (individualTask.id === taskId))[0];
     return (
       <Fragment>
-          <Button key={id} id={task.id} content={task.taskDescription} onClick={this.onButtonClick(id)} />        
+          <Button key={taskId} content={currentTask.taskDescription} onClick={() => this.onClickRemoveTask()} />        
       </Fragment>
     );
   }

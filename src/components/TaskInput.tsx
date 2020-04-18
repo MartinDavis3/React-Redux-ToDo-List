@@ -6,13 +6,14 @@ import { RootState } from '../store';
 import { addTaskToList, removeTaskFromList } from '../store/todo/actions';
 
 export interface ITaskInputProps {
-  onClickSubmitButton: (newTaskDescriptionInput: string) => void;
+  addTaskToList: typeof addTaskToList;
 }
 interface ITaskInputState {
   newTaskDescription: string;
 }
 
 export class TaskInput extends Component<ITaskInputProps, ITaskInputState> {
+
   constructor(props: ITaskInputProps) {
     super(props);
     this.state = {
@@ -24,14 +25,19 @@ export class TaskInput extends Component<ITaskInputProps, ITaskInputState> {
     this.setState( { newTaskDescription: event.currentTarget.value} )
   }
 
+  onClickAddTask(newTaskDescription: string) {
+    if (newTaskDescription !== '' ) {
+    this.props.addTaskToList(newTaskDescription);
+    }
+  }
+
   public render() {
-    const { onClickSubmitButton } = this.props;
     const { newTaskDescription } = this.state;
     return (
       <Fragment>
         <h2>Task</h2>
-        <Input placeholder = 'Task...' onChange={this.onUserFieldChange} />
-        <Button content = 'Submit' onClick={() => onClickSubmitButton(newTaskDescription)} />              
+        <Input onChange={this.onUserFieldChange} />
+        <Button content = 'Add' onClick={() => this.onClickAddTask(newTaskDescription)} />              
       </Fragment>
     );
   }

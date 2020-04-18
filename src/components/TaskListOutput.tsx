@@ -17,8 +17,8 @@ export class TaskListOutput extends Component<ITaskListOutputProps> {
     return (
       <Fragment>
         {taskList.map(individualTask => (
-          <TaskButton taskId={individualTask.id} />
-        ))};        
+          <TaskButton key={individualTask.id} taskId={individualTask.id} />
+        ))}        
       </Fragment>
     );
   }

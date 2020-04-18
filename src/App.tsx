@@ -7,25 +7,16 @@ import { connect } from 'react-redux';
 import { RootState } from './store';
 import { addTaskToList, removeTaskFromList } from './store/todo/actions';
 
-
-
 export interface IAppProps {
 }
 
 export class App extends React.Component<IAppProps> {
 
-  // Submit from TaskInput Form.
-  public onClickSubmitButton = (newTaskDescriptionInput: string) => {
-    if ( newTaskDescriptionInput !== '' ) {
-
-    }
-  }
-
   public render() {
     return (
       <Fragment>
         <h1>To-Do List</h1>
-        <TaskInput onClickSubmitButton={this.onClickSubmitButton} />
+        <TaskInput/>
         <h2>Task List</h2>
         <TaskListOutput/>  
       </Fragment>
@@ -43,4 +34,3 @@ export default connect(
   mapStateToProps,
   { addTaskToList, removeTaskFromList }
 )(App);
-

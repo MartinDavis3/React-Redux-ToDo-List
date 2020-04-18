@@ -13,9 +13,9 @@ const initialState: TaskListState = {
 export function toDoReducer( state = initialState, action: ToDoActionType): TaskListState {
   switch (action.type) {
     case ADD_TASK_TO_LIST:
-      let newId = state.nextFreeId
-      let newNextFreeId = newId++
-      let newTask = { id: newId, taskDescription: action.payload }
+      let newId = state.nextFreeId;
+      let newNextFreeId = newId + 1;
+      let newTask = { id: newId, taskDescription: action.payload };
       return {
         ...state,
         taskList: [...state.taskList, newTask], nextFreeId: newNextFreeId
