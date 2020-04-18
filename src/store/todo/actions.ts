@@ -1,4 +1,4 @@
-import { ToDoActionType, ADD_TASK_TO_LIST, REMOVE_TASK_FROM_LIST, Task } from './types';
+import { ToDoActionType, ADD_TASK_TO_LIST, REMOVE_TASK_FROM_LIST } from './types';
 
 export function addTaskToList( taskDescription: string ): ToDoActionType {
   return {

@@ -17,7 +17,8 @@ export function toDoReducer( state = initialState, action: ToDoActionType): Task
       let newNextFreeId = newId++
       let newTask = { id: newId, taskDescription: action.payload }
       return {
-        ...state, taskList: [...state.taskList, newTask], nextFreeId: newNextFreeId
+        ...state,
+        taskList: [...state.taskList, newTask], nextFreeId: newNextFreeId
       }
     case REMOVE_TASK_FROM_LIST:
       return {
