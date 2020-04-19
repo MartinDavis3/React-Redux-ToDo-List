@@ -35,8 +35,7 @@ export class TaskInput extends Component<ITaskInputProps, ITaskInputState> {
     const { newTaskDescription } = this.state;
     return (
       <Fragment>
-        <h2>Task</h2>
-        <Input onChange={this.onUserFieldChange} />
+        <h2>New task:</h2><Input onChange={this.onUserFieldChange} />
         <Button content = 'Add' onClick={() => this.onClickAddTask(newTaskDescription)} />              
       </Fragment>
     );

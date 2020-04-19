@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Component, Fragment } from 'react';
-import { Button } from 'semantic-ui-react';
+import { Button, Grid } from 'semantic-ui-react';
 import { Task } from '../store/todo/types';
 import { connect } from 'react-redux';
 import { RootState } from '../store';
@@ -24,7 +24,9 @@ export class TaskButton extends Component<ITaskButtonProps> {
     const currentTask = taskList.filter(individualTask => (individualTask.id === taskId))[0];
     return (
       <Fragment>
-          <Button key={taskId} content={currentTask.taskDescription} onClick={() => this.onClickRemoveTask()} />        
+          <Grid.Row>
+            <Button key={taskId} content={currentTask.taskDescription} onClick={() => this.onClickRemoveTask()} />        
+          </Grid.Row>
       </Fragment>
     );
   }

@@ -16,9 +16,12 @@ export class TaskListOutput extends Component<ITaskListOutputProps> {
     const { taskList } = this.props
     return (
       <Fragment>
-        {taskList.map(individualTask => (
-          <TaskButton key={individualTask.id} taskId={individualTask.id} />
-        ))}        
+        { taskList.length > 0 ? 
+          taskList.map(individualTask => {
+          return <TaskButton key={individualTask.id} taskId={individualTask.id} />})
+        :
+          <h3>Nothing in your to-do list - you can relax!</h3>
+        }
       </Fragment>
     );
   }

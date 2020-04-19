@@ -4,7 +4,7 @@ const initialState: TaskListState = {
   taskList: [
     {
       id: 1,
-      taskDescription: 'Get programme working'
+      taskDescription: 'Test this programme'
     }
   ],
   nextFreeId: 2
