@@ -2,12 +2,8 @@ import { TaskListState, ADD_TASK_TO_LIST, REMOVE_TASK_FROM_LIST, ToDoActionType 
 
 const initialState: TaskListState = {
   taskList: [
-    {
-      id: 1,
-      taskDescription: 'Test this programme'
-    }
   ],
-  nextFreeId: 2
+  nextFreeId: 1
 };
 
 export function toDoReducer( state = initialState, action: ToDoActionType): TaskListState {

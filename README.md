@@ -4,6 +4,7 @@ A fork of my original class assignment.
 
 I have added the ability to deploy the application on GitHub Pages.
 
+----------------------------------------------------------------------------
 
 Original assignment:
 ## Redux To-Do Assignment
