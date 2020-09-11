@@ -1,4 +1,12 @@
-# Redux To-Do Assignment
+# React-Redux-ToDo-List
+
+A fork of my original class assignment.
+
+I have added the ability to deploy the application on GitHub Pages.
+
+
+Original assignment:
+## Redux To-Do Assignment
 
 A class asssignment to practice and demonstrate use of react and redux
 by making a simple To-Do list application.
