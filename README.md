@@ -4,6 +4,8 @@ A fork of my original class assignment.
 
 I have added the ability to deploy the application on GitHub Pages.
 
+Deployment information was obtained at: https://github.com/gitname/react-gh-pages
+
 ----------------------------------------------------------------------------
 
 Original assignment:
